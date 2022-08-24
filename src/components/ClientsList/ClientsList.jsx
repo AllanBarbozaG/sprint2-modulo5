@@ -8,7 +8,8 @@ function ClientsList() {
 
   const [clients2, setClients2] = useState([])
 
-  console.log(clients2[0])
+  console.log(clients2.length)
+  
   
   useEffect(() => {
     fetch('http://localhost:3000/clientes', {
@@ -29,6 +30,7 @@ function ClientsList() {
   
 
   const clients = database();
+  console.log(clients.length)
 
   const [openClientInfos, setOpenClientInfos] = useState(false);
 
@@ -67,29 +69,29 @@ function ClientsList() {
         : openClientInfos && (
             <div>
               <span>
-                Cliente: {clients[clientToOpenInfos].name}{" "}
-                {clients[clientToOpenInfos].lastName}
+                Cliente: {clients2[clientToOpenInfos].name}{" "}
+                {clients2[clientToOpenInfos].lastName}
               </span>
               <br />
 
-              <span>Email :{clients[clientToOpenInfos].email} </span>
+              <span>Email :{clients2[clientToOpenInfos].email} </span>
               <br />
-              <span>Telefone: {clients[clientToOpenInfos].phone} </span>
+              <span>Telefone: {clients2[clientToOpenInfos].phone} </span>
               <br />
-              <span>CEP: {clients[clientToOpenInfos].cep} </span>
+              <span>CEP: {clients2[clientToOpenInfos].cep} </span>
               <br />
-              <span>Endereço 1:{clients[clientToOpenInfos].adress1} </span>
+              <span>Endereço 1:{clients2[clientToOpenInfos].adress1} </span>
               <br />
-              <span>Endereço 2:{clients[clientToOpenInfos].adress2} </span>
+              <span>Endereço 2:{clients2[clientToOpenInfos].adress2} </span>
               <br />
               <span>
-                Data de nascimento: {clients[clientToOpenInfos].birthDate}
+                Data de nascimento: {clients2[clientToOpenInfos].birthDate}
               </span>
               <br />
-              <span>CPF: {clients[clientToOpenInfos].cpf} </span>
+              <span>CPF: {clients2[clientToOpenInfos].cpf} </span>
               <br />
               <span>
-                Renda mensal: {clients[clientToOpenInfos].monthlyIncome}
+                Renda mensal: {clients2[clientToOpenInfos].monthlyIncome}
               </span>
 
               <button
