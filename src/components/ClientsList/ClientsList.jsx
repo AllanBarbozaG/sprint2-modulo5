@@ -49,7 +49,7 @@ function ClientsList() {
   return (
     <Container>
       {displayAllClients
-        ? clients2.map((client, index) => {
+        ? clients.map((client, index) => {
             return (
               <StyledDiv key={index}>
                 <ClientsListElement
@@ -69,29 +69,29 @@ function ClientsList() {
         : openClientInfos && (
             <div>
               <span>
-                Cliente: {clients2[clientToOpenInfos].name}{" "}
-                {clients2[clientToOpenInfos].lastName}
+                Cliente: {clients[clientToOpenInfos].name}{" "}
+                {clients[clientToOpenInfos].lastName}
               </span>
               <br />
 
-              <span>Email :{clients2[clientToOpenInfos].email} </span>
+              <span>Email :{clients[clientToOpenInfos].email} </span>
               <br />
-              <span>Telefone: {clients2[clientToOpenInfos].phone} </span>
+              <span>Telefone: {clients[clientToOpenInfos].phone} </span>
               <br />
-              <span>CEP: {clients2[clientToOpenInfos].cep} </span>
+              <span>CEP: {clients[clientToOpenInfos].cep} </span>
               <br />
-              <span>Endereço 1:{clients2[clientToOpenInfos].adress1} </span>
+              <span>Endereço 1:{clients[clientToOpenInfos].adress1} </span>
               <br />
-              <span>Endereço 2:{clients2[clientToOpenInfos].adress2} </span>
+              <span>Endereço 2:{clients[clientToOpenInfos].adress2} </span>
               <br />
               <span>
-                Data de nascimento: {clients2[clientToOpenInfos].birthDate}
+                Data de nascimento: {clients[clientToOpenInfos].birthDate}
               </span>
               <br />
-              <span>CPF: {clients2[clientToOpenInfos].cpf} </span>
+              <span>CPF: {clients[clientToOpenInfos].cpf} </span>
               <br />
               <span>
-                Renda mensal: {clients2[clientToOpenInfos].monthlyIncome}
+                Renda mensal: {clients[clientToOpenInfos].monthlyIncome}
               </span>
 
               <button
