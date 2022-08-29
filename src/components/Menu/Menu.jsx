@@ -1,22 +1,21 @@
-import { useState } from 'react';
-import { Container } from './styles';
-import { FaBars } from 'react-icons/fa';
+import { useState } from "react";
+import { Container } from "./styles";
+import { FaBars } from "react-icons/fa";
 import Sidebar from "../Sidebar/Sidebar";
 
 function Menu() {
+  const [sidebar, setSidebar] = useState(false);
 
-  const [sidebar, setSidebar] = useState(false)
-
-  const showSidebar = () => setSidebar(!sidebar)  
+  const showSidebar = () => setSidebar(!sidebar);
 
   return (
-    <nav>     
+    <nav>
       <Container>
-        <FaBars onClick={showSidebar} />
+        <FaBars onMouseEnter={showSidebar} onClick={showSidebar} />
         {sidebar && <Sidebar active={setSidebar} />}
-      </Container>    
+      </Container>
     </nav>
-  )
+  );
 }
 
-export default Menu
+export default Menu;

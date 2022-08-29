@@ -1,10 +1,15 @@
-import { StyledSpan } from './style'
+import { StyledSpan } from "./style";
 
-function ClientsListElement({ spanValue, callBack }) {
+function ClientsListElement({ spanValue, callBack, backgroundColor, color }) {
   return (
-    <StyledSpan onClick={ callBack } >{ spanValue }</StyledSpan>
-
-  )
+    <StyledSpan
+      color={color}
+      backgroundColor={backgroundColor}
+      onClick={callBack}
+    >
+      {spanValue}
+    </StyledSpan>
+  );
 }
 
-export default ClientsListElement
+export default ClientsListElement;

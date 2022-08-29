@@ -1,13 +1,12 @@
 import Menu from "../Menu/Menu";
-import { StyledHeader } from './style'
+import { StyledHeader } from "./style";
 
 function Header() {
-
   return (
-    <StyledHeader>      
+    <StyledHeader>
       <Menu />
-    </StyledHeader>    
-  )
+    </StyledHeader>
+  );
 }
 
-export default Header
+export default Header;

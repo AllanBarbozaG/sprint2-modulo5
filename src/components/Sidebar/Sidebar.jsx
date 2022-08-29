@@ -7,29 +7,35 @@ function Sidebar({ active }) {
     active(false);
   };
 
+  const openSidebar = () => {
+    active(true);
+  };
+
   return (
-    <div>
-      <Container sidebar={active}>
-        <FaTimes onClick={closeSidebar} />
-        <Content>
-          <SidebarItem
-           Icon={FaHome}
-           linkTo="/"
-           pageName="Home"
-          />
-          <SidebarItem
-            Icon={FaRegFileAlt}
-            linkTo="/cadastrar-novo-cliente"
-            pageName="Cadastrar"
-          />
-          <SidebarItem
-            Icon={FaIdCard}
-            linkTo="/lista-de-clientes"
-            pageName="Clientes"
-          />
-        </Content>
-      </Container>
-    </div>
+    <Container
+      onMouseLeave={() =>
+        setTimeout(() => {
+          closeSidebar();
+        }, 200)
+      }
+      sidebar={active}
+      onMouseEnter={openSidebar}
+    >
+      <FaTimes onClick={closeSidebar} />
+      <Content>
+        <SidebarItem Icon={FaHome} linkTo="/" pageName="Home" />
+        <SidebarItem
+          Icon={FaRegFileAlt}
+          linkTo="/cadastrar-novo-cliente"
+          pageName="Cadastrar"
+        />
+        <SidebarItem
+          Icon={FaIdCard}
+          linkTo="/lista-de-clientes"
+          pageName="Clientes"
+        />
+      </Content>
+    </Container>
   );
 }
 

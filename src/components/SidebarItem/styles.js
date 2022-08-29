@@ -13,7 +13,7 @@ export const StyledLink = styled(Link)`
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  background-color: #98c3ed;
+  background-color: #41a5ff;
   font-size: 20px;
   color: #fbead3;
   padding: 10px;
@@ -23,6 +23,7 @@ export const Container = styled.div`
 
   > svg {
     margin: 0 20px;
+    color: #97f425;
   }
 
   &:hover {

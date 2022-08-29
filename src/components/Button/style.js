@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const StyledButton = styled.button`
   
-  width: auto;
-  height: auto;
+  width: 12rem;
+  height: 2.5rem;
   /* UI Properties */
   text-align: center;
   font: normal normal normal 14px/16px Helvetica Neue;

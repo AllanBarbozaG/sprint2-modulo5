@@ -7,6 +7,9 @@ import database from "../../database/database";
 function RegisterClientForm() {
   const [formPage, setFormPage] = useState(1);
 
+  const [clientName, setClientName] = useState()
+  console.log(clientName)
+
   const databaseArr = database();
   console.log(databaseArr);
 
@@ -18,6 +21,9 @@ function RegisterClientForm() {
             <FormInputWithLabelField
               inputName="clientName"
               labelValue="Nome:"
+              callBack={(e) => {
+                setClientName(e.target.value)
+              }}
             />
             <FormInputWithLabelField
               inputName="clientLastName"
